@@ -27,6 +27,8 @@ const app=createApp({
                 }
             ],
             currentIndex: 0,
+            isHovered: false,
+            autoplayInterval: null,
         };
     },
     computed:{
@@ -53,12 +55,26 @@ const app=createApp({
         changeItem(index) {
             this.currentIndex = index;
         },
+        startAutoplay() {
+            this.autoplayInterval = setInterval(() => {
+                this.nextItem();
+            }, 1000);
+        },
+        stopAutoplay() {
+            clearInterval(this.autoplayInterval);
+        },
+    },
+    watch: {
+        isHovered(value) {
+            if (value) {
+                this.stopAutoplay();
+            } else {
+                this.startAutoplay();
+            }
+        },
     },
 }).mount('#app');
 
-//Avvio al caricamento dell'autoplay
 watchEffect(() => {
-    setInterval(() => {
-        app.nextItem();
-    }, 3000);
+    app.startAutoplay();
 });
