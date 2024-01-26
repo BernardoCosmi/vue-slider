@@ -36,7 +36,7 @@
                     <div class="next" @click="nextItem"></div>
 
                     <!-- Thumbnails -->
-                    <div v-for="(item, index) in items" class="thumb">
+                    <div v-for="(item, index) in items" class="thumb" @click="changeItem(index)">
                         <img :src="item.image" alt="item.title" />
                     </div>
                 </div>
