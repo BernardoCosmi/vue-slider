@@ -62,7 +62,7 @@ const app=createApp({
         startAutoplay() {
             this.autoplayInterval = setInterval(() => {
                 this.nextItem();
-            }, 10000000);
+            }, 3000);
         },
         stopAutoplay() {
             clearInterval(this.autoplayInterval);
