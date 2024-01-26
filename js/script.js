@@ -1,4 +1,4 @@
-const{createApp}=Vue;
+const{createApp, watchEffect}=Vue;
 
 const app=createApp({
     data(){
@@ -53,6 +53,12 @@ const app=createApp({
         changeItem(index) {
             this.currentIndex = index;
         },
-        
-    }
+    },
 }).mount('#app');
+
+//Avvio al caricamento dell'autoplay
+watchEffect(() => {
+    setInterval(() => {
+        app.nextItem();
+    }, 3000);
+});
