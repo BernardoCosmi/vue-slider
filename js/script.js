@@ -34,5 +34,25 @@ const app=createApp({
         currentItem(){
             return this.items[this.currentIndex]
         }, 
+    },
+    methods:{
+        nextItem(){
+            this.currentIndex = (this.currentIndex + 1);
+            if(this.currentIndex > this.items.length - 1){
+                this.currentIndex = this.currentIndex-this.items.length;
+            }
+            console.log(this.currentIndex)
+        },
+        prevItem() {
+            this.currentIndex = (this.currentIndex - 1);
+            if( this.currentIndex < 0 ){
+                this.currentIndex = this.items.length - 1;
+              }
+            console.log('B' + this.currentIndex)
+        },
+        changeItem(index) {
+            this.currentIndex = index;
+            console.log(this.currentIndex)
+        },
     }
 }).mount('#app');

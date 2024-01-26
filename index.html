@@ -30,10 +30,10 @@
                 <div class="thumbs">
 
                     <!-- Prev Button -->
-                    <div class="prev"></div>
+                    <div class="prev" @click="prevItem"></div>
 
                     <!-- Next Button -->
-                    <div class="next"></div>
+                    <div class="next" @click="nextItem"></div>
 
                     <!-- Thumbnails -->
                     <div v-for="(item, index) in items" class="thumb">
