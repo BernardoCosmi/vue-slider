@@ -5,25 +5,29 @@ const app=createApp({
         return{
             items: [
                 {  
-                    image: 'img/01.webp',
-                    title: 'Marvel\'s Spiderman Miles Morale',
-                    text: 'Experience the rise of Miles Morales as the new hero masters incredible, explosive new powers to become his own Spider-Man.',
+                    image: 'img/AOT1.jpg',
+                    title: 'Levi Ackerman',
+                    text: "The only thing we're allowed to do il believe that we won't regret the choice we made ",
                 }, {
-                    image: 'img/02.webp',
-                    title: 'Ratchet & Clank: Rift Apart',
-                    text: 'Go dimension-hopping with Ratchet and Clank as they take on an evil emperor from another reality.',
+                    image: 'img/AOT2.png',
+                    title: 'Eren Jaeger',
+                    text: 'I have the freedom to continue moving forward',
                 }, {
-                    image: 'img/03.webp',
-                    title: 'Fortnite',
-                    text: "Grab all of your friends and drop into Epic Games Fortnite, a massive 100 - player face - off that combines looting, crafting, shootouts and chaos.",
+                    image: 'img/TG2.jpg',
+                    title: 'Ken Kaneki',
+                    text: "The pain you feel today will be the strength you'll have tomorrow.",
                 }, {
-                    image: 'img/04.webp',
-                    title: 'Stray',
-                    text: 'Lost, injured and alone, a stray cat must untangle an ancient mystery to escape a long-forgotten city',
+                    image: 'img/DN2.jpg',
+                    title: 'Light Yagami',
+                    text: "Look around you, and all you will see are people the world would be better off without.",
                 }, {
-                    image: 'img/05.webp',
-                    title: "Marvel's Avengers",
-                    text: 'Marvel\'s Avengers is an epic, third-person, action-adventure game that combines an original, cinematic story with single-player and co-operative gameplay.',
+                    image: 'img/JK2.jpg',
+                    title: "Satoru Gojo",
+                    text: "Nah, i'd win",
+                },{
+                    image: 'img/SAO2.jpg',
+                    title: "Kirigaya Kazuto",
+                    text: "I'd rather trust and regret, than doubt and regret",
                 }
             ],
             currentIndex: 0,
@@ -58,7 +62,7 @@ const app=createApp({
         startAutoplay() {
             this.autoplayInterval = setInterval(() => {
                 this.nextItem();
-            }, 1000);
+            }, 10000000);
         },
         stopAutoplay() {
             clearInterval(this.autoplayInterval);

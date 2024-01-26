@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Slider</title>
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
 </head>
 
 <body>
@@ -36,7 +38,7 @@
                     <div class="next" @click="nextItem"></div>
 
                     <!-- Thumbnails -->
-                    <div v-for="(item, index) in items" class="thumb" @click="changeItem(index)">
+                    <div v-for="(item, index) in items" class="thumb" @click="changeItem(index)" :class="{ active: currentIndex === index }">
                         <img :src="item.image" alt="item.title" />
                     </div>
                 </div>
